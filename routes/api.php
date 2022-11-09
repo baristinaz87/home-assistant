@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/status', function (Request $request){
+Route::get('/status', function (){
     return response()->json(['status' => 'success']);
 });
 
