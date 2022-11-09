@@ -20,7 +20,7 @@ Route::get('/status', function (){
     return response()->json(['status' => 'success']);
 });
 
-Route::post('/sendTemp', function (Request $request){
+Route::post('/sendData', function (Request $request){
     file_put_contents("php://stderr", "temp :".$request->input('temp')."\n");
     return response()->json(['status' => 'success', 'temp' => $request->input('temp')]);
 });
