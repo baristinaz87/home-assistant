@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Log;
 */
 
 Route::post('/sendTemp', function (Request $request){
-    Log::info('temp :'. $request->input('temp'));
+    file_put_contents("php://stderr", "temp :".$request->input('temp')."\n");
     return response()->json(['status' => 'success']);
 });
 
