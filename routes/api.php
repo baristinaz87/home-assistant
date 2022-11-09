@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/sendTemp', function (Request $request){
+Route::post('/sendTemp', function (Request $request){
     return response()->json(['status' => 'success']);
 });
 
