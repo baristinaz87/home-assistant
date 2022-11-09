@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Log;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/sendTemp', function (Request $request){
+    Log::info('temp :'. $request->input('temp'));
     return response()->json(['status' => 'success']);
 });
 
